@@ -1,5 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Component, OnDestroy, OnInit } from '@angular/core';
+import { TestApi1Service } from '@app/services/testApi/test-api1.service';
+import { TestSrc } from '@src/test/test-src';
 
 @Component({
   selector: 'app-root',
@@ -32,7 +34,7 @@ export class AppComponent implements OnInit, OnDestroy {
     return index;
   }
 
-  constructor(private httpClient: HttpClient) {
+  constructor(private httpClient: HttpClient,testApi:TestApi1Service,testSrc:TestSrc) {
 
   }
 
