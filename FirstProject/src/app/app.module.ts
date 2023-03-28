@@ -6,6 +6,7 @@ import { AppComponent } from './app.component';
 import { MyComponent } from './my/my.component';
 import { MyTestComponent } from './my-test/my-test.component';
 import { MypipePipe } from './mypipe.pipe';
+import { HttpClientModule } from "@angular/common/http";
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { MypipePipe } from './mypipe.pipe';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
