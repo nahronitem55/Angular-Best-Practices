@@ -1,0 +1,21 @@
+import { HttpClient } from '@angular/common/http';
+import { Component, OnInit } from '@angular/core';
+import { TestApi1Service } from '@app/services/testApi/test-api1.service';
+
+@Component({
+  selector: 'app-presentation-logic',
+  templateUrl: './presentation-logic.component.html',
+  styleUrls: ['./presentation-logic.component.css']
+})
+export class PresentationLogicComponent implements OnInit {
+
+  constructor(private httpClient: HttpClient, private myApi: TestApi1Service) { }
+  user :any;
+
+  ngOnInit(): void {
+    this.myApi.getUser().subscribe(data => {
+      this.user = data;
+    });
+  }
+
+}
