@@ -34,8 +34,12 @@ export class AppComponent implements OnInit, OnDestroy {
     return index;
   }
 
-  constructor(private httpClient: HttpClient,testApi:TestApi1Service,testSrc:TestSrc) {
+  constructor(private httpClient: HttpClient,testApi:TestApi1Service) {
 
+  }
+
+  exSrc(){
+    testSrc: TestSrc;
   }
 
 }

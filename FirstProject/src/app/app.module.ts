@@ -7,13 +7,17 @@ import { MyComponent } from './my/my.component';
 import { MyTestComponent } from './my-test/my-test.component';
 import { MypipePipe } from './mypipe.pipe';
 import { HttpClientModule } from "@angular/common/http";
+import { AComponent } from './a/a.component';
+import { BComponent } from './b/b.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     MyComponent,
     MyTestComponent,
-    MypipePipe
+    MypipePipe,
+    AComponent,
+    BComponent
   ],
   imports: [
     BrowserModule,
