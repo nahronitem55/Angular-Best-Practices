@@ -9,6 +9,7 @@ import { MypipePipe } from './mypipe.pipe';
 import { HttpClientModule } from "@angular/common/http";
 import { AComponent } from './a/a.component';
 import { BComponent } from './b/b.component';
+import { SubscribeExComponent } from './subscribe-ex/subscribe-ex.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,8 @@ import { BComponent } from './b/b.component';
     MyTestComponent,
     MypipePipe,
     AComponent,
-    BComponent
+    BComponent,
+    SubscribeExComponent
   ],
   imports: [
     BrowserModule,
