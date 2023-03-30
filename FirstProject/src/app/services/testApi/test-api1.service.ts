@@ -1,5 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
+import { TestUser } from '@app/test-user.model';
 import { mergeMap } from 'rxjs';
 
 @Injectable({
@@ -14,7 +15,7 @@ export class TestApi1Service {
     .pipe(
       mergeMap(todo => 
         this.httpClient
-        .get<any>(`https://jsonplaceholder.typicode.com/users/${todo.userId}`
+        .get<TestUser>(`https://jsonplaceholder.typicode.com/users/${todo.userId}`
         )
       )
     );
