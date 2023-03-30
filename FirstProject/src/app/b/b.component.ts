@@ -1,7 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Component, OnDestroy, OnInit } from '@angular/core';
 import {  Observable, delay, Subject, takeUntil } from 'rxjs';
-
+import {environment } from "@src/environments/environment";
 @Component({
   selector: 'app-b',
   templateUrl: './b.component.html',
@@ -18,7 +18,8 @@ export class BComponent implements OnInit, OnDestroy {
   users: any[] = [];
   unscribeSubject = new Subject();
   ngOnInit(): void {
-    this.httpClient.get<any[]>("https://jsonplaceholder.typicode.com/users")
+    console.log(environment.baseUrl);
+    this.httpClient.get<any[]>(environment.baseUrl+"/users")
       .pipe(delay(5000),takeUntil(this.unscribeSubject))
       .subscribe(data => {
       this.users = data;
